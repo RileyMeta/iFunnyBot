@@ -1,0 +1,15 @@
+[Unit]
+Description=Funny Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=funnybot
+WorkingDirectory=/home/funnybot/iFunnyBot
+ExecStart=/home/funnybot/iFunnyBot/venv/bin/python3 /home/funnybot/iFunnyBot/main.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
